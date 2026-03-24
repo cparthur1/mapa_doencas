@@ -625,13 +625,6 @@ const mapData = {
       "shape": "box"
     },
     {
-      "id": 110,
-      "label": "Hemorragia intraluminal",
-      "group": "disease",
-      "shape": "dot",
-      "size": 30
-    },
-    {
       "id": 111,
       "label": "Ruídos hidroaéreos aumentados",
       "group": "symptom",
@@ -664,7 +657,7 @@ const mapData = {
     },
     {
       "id": 117,
-      "label": "Isquemia mesentérica",
+      "label": "Isquemia mesentérica (Íleo vascular)",
       "group": "disease",
       "shape": "dot",
       "size": 30
@@ -748,13 +741,6 @@ const mapData = {
       "label": "Sinal de kullen-kampf",
       "group": "symptom",
       "shape": "box"
-    },
-    {
-      "id": 132,
-      "label": "Tumor gástrico",
-      "group": "disease",
-      "shape": "dot",
-      "size": 30
     },
     {
       "id": 134,
@@ -1111,13 +1097,6 @@ const mapData = {
       "label": "Refluxo hepatojugular e turgência jugular",
       "group": "symptom",
       "shape": "box"
-    },
-    {
-      "id": 194,
-      "label": "Íleo vascular",
-      "group": "disease",
-      "shape": "dot",
-      "size": 30
     },
     {
       "id": 195,
@@ -2078,11 +2057,11 @@ const mapData = {
       "to": 109
     },
     {
-      "from": 110,
+      "from": 108,
       "to": 111
     },
     {
-      "from": 110,
+      "from": 108,
       "to": 84
     },
     {
@@ -2160,18 +2139,6 @@ const mapData = {
     {
       "from": 125,
       "to": 94
-    },
-    {
-      "from": 132,
-      "to": 13
-    },
-    {
-      "from": 132,
-      "to": 19
-    },
-    {
-      "from": 132,
-      "to": 14
     },
     {
       "from": 134,
@@ -2458,27 +2425,27 @@ const mapData = {
       "to": 27
     },
     {
-      "from": 194,
+      "from": 117,
       "to": 195
     },
     {
-      "from": 194,
+      "from": 117,
       "to": 196
     },
     {
-      "from": 194,
+      "from": 117,
       "to": 197
     },
     {
-      "from": 194,
+      "from": 117,
       "to": 198
     },
     {
-      "from": 194,
+      "from": 117,
       "to": 103
     },
     {
-      "from": 194,
+      "from": 117,
       "to": 98
     },
     {
