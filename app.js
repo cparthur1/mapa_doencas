@@ -208,6 +208,28 @@ function registerEvents() {
     isAnimating = false;
   });
 
+  networkContainer.addEventListener('contextmenu', e => e.preventDefault());
+  network.on("oncontext", function (params) {
+    const nodeId = this.getNodeAt(params.pointer.DOM);
+    if (nodeId) {
+      const node = currentNodes.get(nodeId);
+      const newLabel = window.prompt("Editar nome do nó:", node.label);
+      if (newLabel && newLabel.trim() !== "" && newLabel !== node.label) {
+        const titleText = newLabel.trim();
+        // Update dataset UI
+        currentNodes.update({ id: nodeId, label: titleText });
+        // Update underlying array
+        const nIndex = allNodes.findIndex(n => n.id === nodeId);
+        if (nIndex !== -1) allNodes[nIndex].label = titleText;
+        
+        // Update sidebar label if it's the focused node
+        if (focusedNodeId === nodeId && infoTitle.textContent !== "???") {
+          infoTitle.textContent = titleText;
+        }
+      }
+    }
+  });
+
   // Controls
   document.getElementById('zoomIn').addEventListener('click', () => {
     isAnimating = true;
@@ -323,6 +345,8 @@ function pickRandomDisease() {
   testFeedback.classList.add('hidden');
   
   highlightNode(currentTargetNode.id);
+  
+  setTimeout(() => guessInput.focus(), 50);
 }
 
 function handleGuess() {
