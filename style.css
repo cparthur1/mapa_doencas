@@ -453,14 +453,6 @@ body {
   border: 1px solid rgba(239, 68, 68, 0.3);
 }
 
-.test-footer {
-  display: flex;
-  gap: 10px;
-  margin-top: auto;
-}
-
-.test-footer button { flex: 1; }
-
 /* Network Area */
 .network-container {
   flex: 1;
