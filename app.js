@@ -30,7 +30,6 @@ const infoPanel = document.getElementById('infoPanel');
 const testPanel = document.getElementById('testPanel');
 const guessInput = document.getElementById('guessInput');
 const checkGuessBtn = document.getElementById('checkGuessBtn');
-const skipTestBtn = document.getElementById('skipTestBtn');
 const nextTestBtn = document.getElementById('nextTestBtn');
 const testFeedback = document.getElementById('testFeedback');
 const hitsCount = document.getElementById('hitsCount');
@@ -278,7 +277,6 @@ function registerEvents() {
   guessInput.addEventListener('keypress', (e) => {
     if (e.key === 'Enter') handleGuess();
   });
-  skipTestBtn.addEventListener('click', () => pickRandomDisease());
   nextTestBtn.addEventListener('click', () => pickRandomDisease());
 }
 
@@ -331,8 +329,11 @@ function handleGuess() {
   const guess = guessInput.value.trim();
   if (!guess) return;
 
+  // Sanitize actual name: remove text in parentheses and extra spaces
   const actualName = currentTargetNode.label;
-  const matchPercent = calculateSimilarity(guess.toLowerCase(), actualName.toLowerCase());
+  const sanitizedActual = actualName.replace(/\s*\(.*?\)\s*/g, ' ').trim();
+  
+  const matchPercent = calculateSimilarity(guess.toLowerCase(), sanitizedActual.toLowerCase());
   
   const isCorrect = matchPercent >= 0.8;
 
