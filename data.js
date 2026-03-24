@@ -1649,6 +1649,12 @@ const mapData = {
       "label": "Dor somática intensa relacionada à respiração com acometimento dos nervos da parede.",
       "group": "symptom",
       "shape": "box"
+    },
+    {
+      "id": 284,
+      "label": "Eliminação de muco nas fezes",
+      "group": "symptom",
+      "shape": "box"
     }
   ],
   "edges": [
@@ -2735,6 +2741,34 @@ const mapData = {
     {
       "from": 282,
       "to": 283
+    },
+    {
+      "from": 83,
+      "to": 66
+    },
+    {
+      "from": 83,
+      "to": 99
+    },
+    {
+      "from": 83,
+      "to": 100
+    },
+    {
+      "from": 83,
+      "to": 123
+    },
+    {
+      "from": 83,
+      "to": 104
+    },
+    {
+      "from": 83,
+      "to": 284
+    },
+    {
+      "from": 83,
+      "to": 138
     }
   ]
 };
