@@ -5,6 +5,11 @@ let currentEdges = new vis.DataSet();
 let allNodes = [];
 let allEdges = [];
 
+let focusedNodeId = null;
+let shouldFollowFocus = false;
+let draggedNodeId = null;
+let isAnimating = false;
+
 // Guided Nav
 let diseaseNodes = [];
 let currentDiseaseIndex = 0;
@@ -88,7 +93,8 @@ const options = {
     stabilization: {
       iterations: 200,
       fit: true
-    }
+    },
+    minVelocity: 0.75
   },
   interaction: {
     hover: true,
@@ -135,6 +141,27 @@ function initApp() {
   });
 
   registerEvents();
+
+  function trackNode() {
+    if (shouldFollowFocus && focusedNodeId && draggedNodeId !== focusedNodeId && !isAnimating) {
+      const pos = network.getPositions([focusedNodeId])[focusedNodeId];
+      if (pos) {
+        const viewPos = network.getViewPosition();
+        const dx = pos.x - viewPos.x;
+        const dy = pos.y - viewPos.y;
+        
+        if (Math.abs(dx) > 0.5 || Math.abs(dy) > 0.5) {
+          const smoothFactor = 0.12; 
+          network.moveTo({ 
+            position: { x: viewPos.x + dx * smoothFactor, y: viewPos.y + dy * smoothFactor }, 
+            animation: false 
+          });
+        }
+      }
+    }
+    requestAnimationFrame(trackNode);
+  }
+  trackNode();
 }
 
 function registerEvents() {
@@ -148,16 +175,35 @@ function registerEvents() {
     }
   });
 
+  network.on("dragStart", function (params) {
+    if (params.nodes.length > 0) {
+      draggedNodeId = params.nodes[0];
+    } else {
+      shouldFollowFocus = false;
+    }
+  });
+
+  network.on("dragEnd", function (params) {
+    draggedNodeId = null;
+  });
+
+  network.on("animationFinished", function() {
+    isAnimating = false;
+  });
+
   // Controls
   document.getElementById('zoomIn').addEventListener('click', () => {
+    isAnimating = true;
     network.moveTo({ scale: network.getScale() * 1.5, animation: true });
   });
   
   document.getElementById('zoomOut').addEventListener('click', () => {
+    isAnimating = true;
     network.moveTo({ scale: network.getScale() / 1.5, animation: true });
   });
 
   document.getElementById('fitView').addEventListener('click', () => {
+    isAnimating = true;
     network.fit({ animation: true });
     resetHighlights();
   });
@@ -224,6 +270,9 @@ function filterNodes(type) {
 }
 
 function highlightNode(nodeId) {
+  focusedNodeId = nodeId;
+  shouldFollowFocus = true;
+
   const selectedNode = currentNodes.get(nodeId);
   const connectedNodes = network.getConnectedNodes(nodeId);
   const connectedEdges = network.getConnectedEdges(nodeId);
@@ -254,6 +303,7 @@ function highlightNode(nodeId) {
   currentEdges.update(edgeUpdates);
   
   // Focus on node
+  isAnimating = true;
   network.focus(nodeId, {
     scale: 1.2,
     animation: { duration: 500, easingFunction: 'easeInOutQuad' }
@@ -261,6 +311,9 @@ function highlightNode(nodeId) {
 }
 
 function resetHighlights() {
+  focusedNodeId = null;
+  shouldFollowFocus = false;
+  
   infoPanel.classList.add('hidden');
   
   const nodeUpdates = allNodes.map(n => ({
