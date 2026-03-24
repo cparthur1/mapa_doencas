@@ -14,12 +14,30 @@ let isAnimating = false;
 let diseaseNodes = [];
 let currentDiseaseIndex = 0;
 
+// Test Mode State
+let isTestMode = false;
+let testPool = [];
+let currentTargetNode = null;
+let hits = 0;
+let misses = 0;
+
 // DOM Elements
 const loadingOverlay = document.getElementById('loading');
 const networkContainer = document.getElementById('networkMap');
 const searchInput = document.getElementById('searchInput');
 const toggleBtns = document.querySelectorAll('.toggle-btn');
 const infoPanel = document.getElementById('infoPanel');
+const testPanel = document.getElementById('testPanel');
+const guessInput = document.getElementById('guessInput');
+const checkGuessBtn = document.getElementById('checkGuessBtn');
+const skipTestBtn = document.getElementById('skipTestBtn');
+const nextTestBtn = document.getElementById('nextTestBtn');
+const testFeedback = document.getElementById('testFeedback');
+const hitsCount = document.getElementById('hitsCount');
+const missesCount = document.getElementById('missesCount');
+const studyModeBtn = document.getElementById('studyModeBtn');
+const testModeBtn = document.getElementById('testModeBtn');
+
 const infoTitle = document.getElementById('infoTitle');
 const infoType = document.getElementById('infoType');
 const infoConnections = document.getElementById('infoConnections');
@@ -250,6 +268,140 @@ function registerEvents() {
       filterNodes(e.currentTarget.dataset.filter);
     });
   });
+
+  // Mode Switching
+  studyModeBtn.addEventListener('click', () => switchMode('study'));
+  testModeBtn.addEventListener('click', () => switchMode('test'));
+
+  // Test Actions
+  checkGuessBtn.addEventListener('click', handleGuess);
+  guessInput.addEventListener('keypress', (e) => {
+    if (e.key === 'Enter') handleGuess();
+  });
+  skipTestBtn.addEventListener('click', () => pickRandomDisease());
+  nextTestBtn.addEventListener('click', () => pickRandomDisease());
+}
+
+function switchMode(mode) {
+  isTestMode = mode === 'test';
+  
+  if (isTestMode) {
+    studyModeBtn.classList.remove('active');
+    testModeBtn.classList.add('active');
+    infoPanel.classList.add('hidden');
+    testPanel.classList.remove('hidden');
+    initTestMode();
+  } else {
+    studyModeBtn.classList.add('active');
+    testModeBtn.classList.remove('active');
+    testPanel.classList.add('hidden');
+    resetHighlights();
+  }
+}
+
+function initTestMode() {
+  testPool = [...diseaseNodes];
+  hits = 0;
+  misses = 0;
+  updateScoreUI();
+  pickRandomDisease();
+}
+
+function pickRandomDisease() {
+  if (testPool.length === 0) {
+    alert("Parabéns! Você acertou todas as doenças. O jogo irá recomeçar.");
+    initTestMode();
+    return;
+  }
+
+  const randomIndex = Math.floor(Math.random() * testPool.length);
+  currentTargetNode = testPool[randomIndex];
+  
+  // Reset UI
+  guessInput.value = '';
+  guessInput.disabled = false;
+  checkGuessBtn.classList.remove('hidden');
+  nextTestBtn.classList.add('hidden');
+  testFeedback.classList.add('hidden');
+  
+  highlightNode(currentTargetNode.id);
+}
+
+function handleGuess() {
+  const guess = guessInput.value.trim();
+  if (!guess) return;
+
+  const actualName = currentTargetNode.label;
+  const matchPercent = calculateSimilarity(guess.toLowerCase(), actualName.toLowerCase());
+  
+  const isCorrect = matchPercent >= 0.8;
+
+  if (isCorrect) {
+    hits++;
+    testPool = testPool.filter(n => n.id !== currentTargetNode.id);
+    showTestFeedback(true, actualName);
+  } else {
+    misses++;
+    showTestFeedback(false, actualName);
+  }
+  
+  guessInput.disabled = true;
+  checkGuessBtn.classList.add('hidden');
+  nextTestBtn.classList.remove('hidden');
+  updateScoreUI();
+}
+
+function showTestFeedback(isCorrect, actualName) {
+  testFeedback.className = `test-feedback ${isCorrect ? 'success' : 'error'}`;
+  testFeedback.innerHTML = isCorrect 
+    ? `<i class="fa-solid fa-check-circle"></i> Correto! É <b>${actualName}</b>.` 
+    : `<i class="fa-solid fa-times-circle"></i> Incorreto. Era <b>${actualName}</b>.`;
+  testFeedback.classList.remove('hidden');
+  
+  // Reveal name on map temporarily by re-highlighting but with visibility
+  // (In a real scenario, we'd just update the specific node in DataSet)
+  highlightNode(currentTargetNode.id, true);
+}
+
+function updateScoreUI() {
+  hitsCount.textContent = hits;
+  missesCount.textContent = misses;
+}
+
+// Levenshtein Distance for typing tolerance
+function calculateSimilarity(s1, s2) {
+  let longer = s1;
+  let shorter = s2;
+  if (s1.length < s2.length) {
+    longer = s2;
+    shorter = s1;
+  }
+  const longerLength = longer.length;
+  if (longerLength === 0) return 1.0;
+  return (longerLength - editDistance(longer, shorter)) / parseFloat(longerLength);
+}
+
+function editDistance(s1, s2) {
+  s1 = s1.toLowerCase();
+  s2 = s2.toLowerCase();
+  const costs = [];
+  for (let i = 0; i <= s1.length; i++) {
+    let lastValue = i;
+    for (let j = 0; j <= s2.length; j++) {
+      if (i === 0) costs[j] = j;
+      else {
+        if (j > 0) {
+          let newValue = costs[j - 1];
+          if (s1.charAt(i - 1) !== s2.charAt(j - 1))
+            newValue = Math.min(Math.min(newValue, lastValue), costs[j]) + 1;
+          costs[j - 1] = lastValue;
+          lastValue = newValue;
+        }
+      }
+    }
+    if (i > 0) costs[s2.length] = lastValue;
+  }
+  return costs[s2.length];
 }
 
 function filterNodes(type) {
@@ -269,7 +421,7 @@ function filterNodes(type) {
   currentNodes.update(updates);
 }
 
-function highlightNode(nodeId) {
+function highlightNode(nodeId, revealInTest = false) {
   focusedNodeId = nodeId;
   shouldFollowFocus = true;
 
@@ -278,12 +430,21 @@ function highlightNode(nodeId) {
   const connectedEdges = network.getConnectedEdges(nodeId);
   
   // Show in Sidebar
-  showInfoPanel(selectedNode, connectedNodes);
+  if (isTestMode && !revealInTest) {
+    // Specifically hide label in sidebar during test
+  } else {
+    showInfoPanel(selectedNode, connectedNodes);
+  }
   
   // Dim everything else
   const nodeUpdates = allNodes.map(n => {
+    let label = n.label;
+    if (isTestMode && n.id === nodeId && !revealInTest) {
+      label = "???";
+    }
+
     if (n.id === nodeId) {
-      return { id: n.id, hidden: false, opacity: 1, font: {bold: true} };
+      return { id: n.id, label: label, hidden: false, opacity: 1, font: {bold: true} };
     } else if (connectedNodes.includes(n.id)) {
       return { id: n.id, hidden: false, opacity: 1 };
     } else {
@@ -336,7 +497,11 @@ function resetHighlights() {
 }
 
 function showInfoPanel(node, connectedIds) {
-  infoTitle.textContent = node.label;
+  if (isTestMode && node.id === currentTargetNode.id && testFeedback.classList.contains('hidden')) {
+    infoTitle.textContent = "???";
+  } else {
+    infoTitle.textContent = node.label;
+  }
   
   infoType.className = 'badge';
   if (node.group === 'disease') {

@@ -44,6 +44,11 @@
           <button class="toggle-btn" data-filter="symptom"><i class="fa-solid fa-stethoscope"></i> Sintomas</button>
         </div>
         
+        <div class="mode-selector">
+          <button class="mode-btn active" id="studyModeBtn"><i class="fa-solid fa-book-open"></i> Estudo</button>
+          <button class="mode-btn" id="testModeBtn"><i class="fa-solid fa-trophy"></i> Teste</button>
+        </div>
+        
         <div class="legend">
           <div class="legend-item">
             <span class="color-dot disease-dot"></span> Doença / Complicação
@@ -63,6 +68,31 @@
           <ul id="infoConnections"></ul>
         </div>
         <button id="resetViewBtn" class="action-btn"><i class="fa-solid fa-rotate-left"></i> Restaurar Visão</button>
+      </div>
+
+      <!-- Test Mode Panel -->
+      <div id="testPanel" class="info-panel hidden">
+        <div class="test-header">
+          <h2>Modo Teste</h2>
+          <div class="score-board">
+            <span class="score hit">Acertos: <b id="hitsCount">0</b></span>
+            <span class="score miss">Erros: <b id="missesCount">0</b></span>
+          </div>
+        </div>
+        
+        <div class="test-body">
+          <p class="test-instruction">Qual é esta patologia?</p>
+          <div class="input-group">
+            <input type="text" id="guessInput" placeholder="Digite sua resposta...">
+            <button id="checkGuessBtn" class="primary-btn">Confirmar</button>
+          </div>
+          <div id="testFeedback" class="test-feedback hidden"></div>
+        </div>
+        
+        <div class="test-footer">
+          <button id="skipTestBtn" class="secondary-btn">Sortear Outra</button>
+          <button id="nextTestBtn" class="primary-btn hidden">Próxima Doença</button>
+        </div>
       </div>
     </aside>
 
