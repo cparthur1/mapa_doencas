@@ -87,7 +87,7 @@ const options = {
       centralGravity: 0.2,
       springLength: 150,
       springConstant: 0.04,
-      damping: 0.15,
+      damping: 0.40,
       avoidOverlap: 0.5
     },
     stabilization: {

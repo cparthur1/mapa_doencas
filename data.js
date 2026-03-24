@@ -2,14 +2,14 @@ const mapData = {
   "nodes": [
     {
       "id": 1,
-      "label": "Abscesso hep\u00e1tico",
+      "label": "Abscesso hepático",
       "group": "disease",
       "shape": "dot",
       "size": 30
     },
     {
       "id": 2,
-      "label": "Percuss\u00e3o d\u00edgito-digital intensamente dolorosa",
+      "label": "Percussão dígito-digital intensamente dolorosa",
       "group": "symptom",
       "shape": "box"
     },
@@ -21,16 +21,10 @@ const mapData = {
     },
     {
       "id": 4,
-      "label": "Aneurisma de art\u00e9ria hep\u00e1tica",
+      "label": "Aneurisma de artéria hepática",
       "group": "disease",
       "shape": "dot",
       "size": 30
-    },
-    {
-      "id": 5,
-      "label": "Ausculta de sopro na \u00e1rea hep\u00e1tica",
-      "group": "symptom",
-      "shape": "box"
     },
     {
       "id": 6,
@@ -41,50 +35,50 @@ const mapData = {
     },
     {
       "id": 7,
-      "label": "F\u00edgado aumentado",
+      "label": "Hepatomegalia",
       "group": "symptom",
       "shape": "box"
     },
     {
       "id": 8,
-      "label": "Superf\u00edcie nodular",
+      "label": "Superfície hepática nodular",
       "group": "symptom",
       "shape": "box"
     },
     {
       "id": 9,
-      "label": "Borda romba",
+      "label": "Borda hepática romba",
       "group": "symptom",
       "shape": "box"
     },
     {
       "id": 10,
-      "label": "Consist\u00eancia p\u00e9trea e indolor",
+      "label": "Fígado pétreo e indolor",
       "group": "symptom",
       "shape": "box"
     },
     {
       "id": 11,
-      "label": "Sopro na \u00e1rea hep\u00e1tica",
+      "label": "Sopro hepático",
       "group": "symptom",
       "shape": "box"
     },
     {
       "id": 12,
-      "label": "CA g\u00e1strico",
+      "label": "CA gástrico",
       "group": "disease",
       "shape": "dot",
       "size": 30
     },
     {
       "id": 13,
-      "label": "Abaulamento epig\u00e1strico",
+      "label": "Abaulamento epigástrico",
       "group": "symptom",
       "shape": "box"
     },
     {
       "id": 14,
-      "label": "Plenitude p\u00f3s-prandial",
+      "label": "Plenitude pós-prandial",
       "group": "symptom",
       "shape": "box"
     },
@@ -95,14 +89,8 @@ const mapData = {
       "shape": "box"
     },
     {
-      "id": 16,
-      "label": "V\u00f4mitos",
-      "group": "symptom",
-      "shape": "box"
-    },
-    {
       "id": 17,
-      "label": "Hemat\u00eamese",
+      "label": "Hematêmese",
       "group": "symptom",
       "shape": "box"
     },
@@ -114,7 +102,7 @@ const mapData = {
     },
     {
       "id": 19,
-      "label": "N\u00f3dulo irm\u00e3 maria jos\u00e9",
+      "label": "Nódulo de Irmã Maria José",
       "group": "symptom",
       "shape": "box"
     },
@@ -125,40 +113,33 @@ const mapData = {
       "shape": "box"
     },
     {
-      "id": 21,
-      "label": "Met\u00e1stases",
-      "group": "disease",
-      "shape": "dot",
-      "size": 30
-    },
-    {
       "id": 22,
-      "label": "Cirrose hep\u00e1tica",
+      "label": "Cirrose hepática",
       "group": "disease",
       "shape": "dot",
       "size": 30
     },
     {
       "id": 23,
-      "label": "F\u00edgado aumentado no in\u00edcio e reduzido no final",
+      "label": "Hepatomegalia inicial, atrofia tardia",
       "group": "symptom",
       "shape": "box"
     },
     {
       "id": 24,
-      "label": "Consist\u00eancia r\u00edgida",
+      "label": "Fígado rígido",
       "group": "symptom",
       "shape": "box"
     },
     {
       "id": 25,
-      "label": "Indolor",
+      "label": "Organomegalia indolor",
       "group": "symptom",
       "shape": "box"
     },
     {
       "id": 26,
-      "label": "Circula\u00e7\u00e3o colateral",
+      "label": "Circulação colateral",
       "group": "symptom",
       "shape": "box"
     },
@@ -189,13 +170,13 @@ const mapData = {
     },
     {
       "id": 31,
-      "label": "Tr\u00edade de charcot (c\u00f3lica biliar, febre com calafrios e icter\u00edcia)",
+      "label": "Tríade de charcot (cólica biliar, febre com calafrios e icterícia)",
       "group": "symptom",
       "shape": "box"
     },
     {
       "id": 32,
-      "label": "P\u00eantade de reynold (+ hipotens\u00e3o e confus\u00e3o mental)",
+      "label": "Pêntade de reynold (+ hipotensão e confusão mental)",
       "group": "symptom",
       "shape": "box"
     },
@@ -214,7 +195,7 @@ const mapData = {
     },
     {
       "id": 35,
-      "label": "Dor em c\u00f3lica no hipoc\u00f4ndrio direito irradiada para esc\u00e1pula (sinal de boas)",
+      "label": "Dor em cólica no hipocôndrio direito irradiada para escápula (sinal de boas)",
       "group": "symptom",
       "shape": "box"
     },
@@ -232,44 +213,38 @@ const mapData = {
     },
     {
       "id": 38,
-      "label": "N\u00e1useas e v\u00f4mitos",
+      "label": "Náuseas e vômitos",
       "group": "symptom",
       "shape": "box"
     },
     {
       "id": 39,
-      "label": "Hepatite aguda (incluindo etiologia alco\u00f3lica)",
+      "label": "Hepatite aguda (incluindo etiologia alcoólica)",
       "group": "disease",
       "shape": "dot",
       "size": 30
     },
     {
       "id": 40,
-      "label": "Superf\u00edcie lisa",
+      "label": "Superfície hepática lisa",
       "group": "symptom",
       "shape": "box"
     },
     {
       "id": 41,
-      "label": "Borda fina",
+      "label": "Borda hepática fina",
       "group": "symptom",
       "shape": "box"
     },
     {
       "id": 42,
-      "label": "Consist\u00eancia normal a macia",
+      "label": "Fígado macio/normal",
       "group": "symptom",
       "shape": "box"
     },
     {
       "id": 43,
-      "label": "Doloroso",
-      "group": "symptom",
-      "shape": "box"
-    },
-    {
-      "id": 44,
-      "label": "N\u00e1useas",
+      "label": "Organomegalia dolorosa",
       "group": "symptom",
       "shape": "box"
     },
@@ -281,20 +256,20 @@ const mapData = {
     },
     {
       "id": 46,
-      "label": "Febr\u00edcula",
+      "label": "Febrícula",
       "group": "symptom",
       "shape": "box"
     },
     {
       "id": 47,
-      "label": "Hepatite cr\u00f4nica",
+      "label": "Hepatite crônica",
       "group": "disease",
       "shape": "dot",
       "size": 30
     },
     {
       "id": 48,
-      "label": "Consist\u00eancia firme e indolor",
+      "label": "Fígado firme e indolor",
       "group": "symptom",
       "shape": "box"
     },
@@ -307,25 +282,13 @@ const mapData = {
     },
     {
       "id": 50,
-      "label": "Dor epig\u00e1strica/mesog\u00e1strica migrat\u00f3ria para fossa il\u00edaca direita",
-      "group": "symptom",
-      "shape": "box"
-    },
-    {
-      "id": 51,
-      "label": "N\u00e1useas/v\u00f4mitos",
+      "label": "Dor epigástrica/mesogástrica migratória para fossa ilíaca direita",
       "group": "symptom",
       "shape": "box"
     },
     {
       "id": 52,
-      "label": "Defesa volunt\u00e1ria/contratura",
-      "group": "symptom",
-      "shape": "box"
-    },
-    {
-      "id": 53,
-      "label": "Sinal de blumberg",
+      "label": "Defesa voluntária/contratura",
       "group": "symptom",
       "shape": "box"
     },
@@ -355,26 +318,26 @@ const mapData = {
     },
     {
       "id": 58,
-      "label": "C\u00e2ncer de \u00e2ngulo espl\u00eanico do c\u00f3lon",
+      "label": "Câncer de ângulo esplênico do cólon",
       "group": "disease",
       "shape": "dot",
       "size": 30
     },
     {
       "id": 59,
-      "label": "Diagn\u00f3stico diferencial de tumor espl\u00eanico",
+      "label": "Diagnóstico diferencial de tumor esplênico",
       "group": "symptom",
       "shape": "box"
     },
     {
       "id": 60,
-      "label": "Dor e massa em hipoc\u00f4ndrio esquerdo",
+      "label": "Dor e massa em hipocôndrio esquerdo",
       "group": "symptom",
       "shape": "box"
     },
     {
       "id": 61,
-      "label": "CA de es\u00f4fago",
+      "label": "CA de esôfago",
       "group": "disease",
       "shape": "dot",
       "size": 30
@@ -387,25 +350,25 @@ const mapData = {
     },
     {
       "id": 63,
-      "label": "In\u00edcio < 3 meses",
+      "label": "Início < 3 meses",
       "group": "symptom",
       "shape": "box"
     },
     {
       "id": 64,
-      "label": "R\u00e1pida progress\u00e3o",
+      "label": "Rápida progressão",
       "group": "symptom",
       "shape": "box"
     },
     {
       "id": 65,
-      "label": "Pior para s\u00f3lidos",
+      "label": "Pior para sólidos",
       "group": "symptom",
       "shape": "box"
     },
     {
       "id": 66,
-      "label": "Sangue oculto",
+      "label": "Sangue oculto nas fezes",
       "group": "symptom",
       "shape": "box"
     },
@@ -435,14 +398,8 @@ const mapData = {
       "shape": "box"
     },
     {
-      "id": 71,
-      "label": "Sangramento oculto",
-      "group": "symptom",
-      "shape": "box"
-    },
-    {
       "id": 72,
-      "label": "Sangue vivo",
+      "label": "Hematêmese (sangue vivo)",
       "group": "symptom",
       "shape": "box"
     },
@@ -461,14 +418,14 @@ const mapData = {
     },
     {
       "id": 75,
-      "label": "\u00dalcera p\u00e9ptica",
+      "label": "Úlcera péptica",
       "group": "disease",
       "shape": "dot",
       "size": 30
     },
     {
       "id": 76,
-      "label": "G\u00e1strica (epigastralgia agravada ao comer)",
+      "label": "Gástrica (epigastralgia agravada ao comer)",
       "group": "symptom",
       "shape": "box"
     },
@@ -480,20 +437,20 @@ const mapData = {
     },
     {
       "id": 78,
-      "label": "Varizes esof\u00e1gicas",
+      "label": "Varizes esofágicas",
       "group": "disease",
       "shape": "dot",
       "size": 30
     },
     {
       "id": 79,
-      "label": "Hemat\u00eamese maci\u00e7a e grave",
+      "label": "Hematêmese maciça e grave",
       "group": "symptom",
       "shape": "box"
     },
     {
       "id": 80,
-      "label": "Associada \u00e0 hipertens\u00e3o portal (esplenomegalia, ascite, circula\u00e7\u00e3o colateral)",
+      "label": "Associada à hipertensão portal (esplenomegalia, ascite, circulação colateral)",
       "group": "symptom",
       "shape": "box"
     },
@@ -506,13 +463,13 @@ const mapData = {
     },
     {
       "id": 82,
-      "label": "V\u00f4mitos incoerc\u00edveis seguidos de hemat\u00eamese/hda",
+      "label": "Vômitos incoercíveis seguidos de hematêmese/hda",
       "group": "symptom",
       "shape": "box"
     },
     {
       "id": 83,
-      "label": "P\u00f3lipos",
+      "label": "Pólipos",
       "group": "disease",
       "shape": "dot",
       "size": 30
@@ -524,23 +481,11 @@ const mapData = {
       "shape": "box"
     },
     {
-      "id": 85,
-      "label": "Sangue nas fezes",
-      "group": "symptom",
-      "shape": "box"
-    },
-    {
       "id": 86,
       "label": "Diarreia",
       "group": "disease",
       "shape": "dot",
       "size": 30
-    },
-    {
-      "id": 87,
-      "label": "Fezes l\u00edquidas",
-      "group": "symptom",
-      "shape": "box"
     },
     {
       "id": 88,
@@ -550,26 +495,26 @@ const mapData = {
     },
     {
       "id": 89,
-      "label": "Diverticulite c\u00f3lica",
+      "label": "Diverticulite cólica",
       "group": "disease",
       "shape": "dot",
       "size": 30
     },
     {
       "id": 90,
-      "label": "Dor intensa na fossa il\u00edaca esquerda",
+      "label": "Dor intensa na fossa ilíaca esquerda",
       "group": "symptom",
       "shape": "box"
     },
     {
       "id": 91,
-      "label": "Calor cut\u00e2neo",
+      "label": "Calor cutâneo",
       "group": "symptom",
       "shape": "box"
     },
     {
       "id": 92,
-      "label": "Agrava\u00e7\u00e3o da dor \u00e0 evacua\u00e7\u00e3o",
+      "label": "Agravação da dor à evacuação",
       "group": "symptom",
       "shape": "box"
     },
@@ -581,32 +526,32 @@ const mapData = {
     },
     {
       "id": 94,
-      "label": "Blumberg positivo",
+      "label": "Sinal de Blumberg",
       "group": "symptom",
       "shape": "box"
     },
     {
       "id": 95,
-      "label": "Massa palp\u00e1vel",
+      "label": "Massa palpável",
       "group": "symptom",
       "shape": "box"
     },
     {
       "id": 96,
-      "label": "Doen\u00e7a diverticular",
+      "label": "Doença diverticular",
       "group": "disease",
       "shape": "dot",
       "size": 30
     },
     {
       "id": 97,
-      "label": "C\u00f3licas em c\u00f3lon descendente/sigm\u00f3ide",
+      "label": "Cólicas em cólon descendente/sigmóide",
       "group": "symptom",
       "shape": "box"
     },
     {
       "id": 98,
-      "label": "Distens\u00e3o",
+      "label": "Distensão abdominal",
       "group": "symptom",
       "shape": "box"
     },
@@ -624,13 +569,13 @@ const mapData = {
     },
     {
       "id": 101,
-      "label": "Constipa\u00e7\u00e3o em altern\u00e2ncia",
+      "label": "Constipação em alternância",
       "group": "symptom",
       "shape": "box"
     },
     {
       "id": 102,
-      "label": "Doen\u00e7a inflamat\u00f3ria intestinal",
+      "label": "Doença inflamatória intestinal",
       "group": "disease",
       "shape": "dot",
       "size": 30
@@ -656,7 +601,7 @@ const mapData = {
     },
     {
       "id": 106,
-      "label": "Hematoquezia (ceco e c\u00f3lon ascendente)",
+      "label": "Hematoquezia (ceco e cólon ascendente)",
       "group": "symptom",
       "shape": "box"
     },
@@ -688,26 +633,20 @@ const mapData = {
     },
     {
       "id": 111,
-      "label": "Ru\u00eddos hidroa\u00e9reos aumentados",
+      "label": "Ruídos hidroaéreos aumentados",
       "group": "symptom",
       "shape": "box"
     },
     {
       "id": 112,
-      "label": "\u00cdleo adin\u00e2mico",
+      "label": "Íleo adinâmico",
       "group": "disease",
       "shape": "dot",
       "size": 30
     },
     {
       "id": 113,
-      "label": "Abdome protuberante por g\u00e1s",
-      "group": "symptom",
-      "shape": "box"
-    },
-    {
-      "id": 114,
-      "label": "Distens\u00e3o generalizada",
+      "label": "Abdome protuberante por gás",
       "group": "symptom",
       "shape": "box"
     },
@@ -719,38 +658,38 @@ const mapData = {
     },
     {
       "id": 116,
-      "label": "Aus\u00eancia de peristaltismo",
+      "label": "Ausência de peristaltismo",
       "group": "symptom",
       "shape": "box"
     },
     {
       "id": 117,
-      "label": "Isquemia mesent\u00e9rica",
+      "label": "Isquemia mesentérica",
       "group": "disease",
       "shape": "dot",
       "size": 30
     },
     {
       "id": 118,
-      "label": "Dor s\u00fabita intensa periumbilical/epig\u00e1strica",
+      "label": "Dor súbita intensa periumbilical/epigástrica",
       "group": "symptom",
       "shape": "box"
     },
     {
       "id": 119,
-      "label": "Sopro no epig\u00e1strio",
+      "label": "Sopro epigástrico",
       "group": "symptom",
       "shape": "box"
     },
     {
       "id": 120,
-      "label": "Desfecho grave (\u00edleo vascular)",
+      "label": "Desfecho grave (íleo vascular)",
       "group": "symptom",
       "shape": "box"
     },
     {
       "id": 121,
-      "label": "Obstru\u00e7\u00e3o intestinal",
+      "label": "Obstrução intestinal",
       "group": "disease",
       "shape": "dot",
       "size": 30
@@ -763,19 +702,13 @@ const mapData = {
     },
     {
       "id": 123,
-      "label": "Constipa\u00e7\u00e3o",
-      "group": "symptom",
-      "shape": "box"
-    },
-    {
-      "id": 124,
-      "label": "Distens\u00e3o abdominal progressiva",
+      "label": "Constipação",
       "group": "symptom",
       "shape": "box"
     },
     {
       "id": 125,
-      "label": "Perfura\u00e7\u00e3o de v\u00edsceras (\u00dalcera p\u00e9ptica perfurada, etc.)",
+      "label": "Perfuração de vísceras (Úlcera péptica perfurada, etc.)",
       "group": "disease",
       "shape": "dot",
       "size": 30
@@ -788,7 +721,7 @@ const mapData = {
     },
     {
       "id": 127,
-      "label": "Abdome em t\u00e1bua",
+      "label": "Abdome em tábua",
       "group": "symptom",
       "shape": "box"
     },
@@ -818,16 +751,10 @@ const mapData = {
     },
     {
       "id": 132,
-      "label": "Tumor g\u00e1strico",
+      "label": "Tumor gástrico",
       "group": "disease",
       "shape": "dot",
       "size": 30
-    },
-    {
-      "id": 133,
-      "label": "N\u00f3dulo de irm\u00e3 maria jos\u00e9",
-      "group": "symptom",
-      "shape": "box"
     },
     {
       "id": 134,
@@ -838,7 +765,7 @@ const mapData = {
     },
     {
       "id": 135,
-      "label": "Suboclus\u00e3o",
+      "label": "Suboclusão",
       "group": "symptom",
       "shape": "box"
     },
@@ -920,40 +847,34 @@ const mapData = {
     },
     {
       "id": 148,
-      "label": "Ba\u00e7o aumentado",
+      "label": "Esplenomegalia",
       "group": "symptom",
       "shape": "box"
     },
     {
       "id": 149,
-      "label": "Amolecido",
+      "label": "Baço amolecido",
       "group": "symptom",
       "shape": "box"
     },
     {
       "id": 150,
-      "label": "Liso",
+      "label": "Baço liso",
       "group": "symptom",
       "shape": "box"
     },
     {
       "id": 151,
-      "label": "Sopro espl\u00eanico",
+      "label": "Sopro esplênico",
       "group": "symptom",
       "shape": "box"
     },
     {
       "id": 152,
-      "label": "Mal\u00e1ria",
+      "label": "Malária",
       "group": "disease",
       "shape": "dot",
       "size": 30
-    },
-    {
-      "id": 153,
-      "label": "Sopro no espa\u00e7o de traube",
-      "group": "symptom",
-      "shape": "box"
     },
     {
       "id": 154,
@@ -964,26 +885,26 @@ const mapData = {
     },
     {
       "id": 155,
-      "label": "Icter\u00edcia associada",
+      "label": "Icterícia associada",
       "group": "symptom",
       "shape": "box"
     },
     {
       "id": 156,
-      "label": "Esferocitose (Destrui\u00e7\u00e3o de eritr\u00f3citos)",
+      "label": "Esferocitose (Destruição de eritrócitos)",
       "group": "disease",
       "shape": "dot",
       "size": 30
     },
     {
       "id": 157,
-      "label": "Discretamente r\u00edgido",
+      "label": "Baço discretamente rígido",
       "group": "symptom",
       "shape": "box"
     },
     {
       "id": 158,
-      "label": "Talassemia (Destrui\u00e7\u00e3o de eritr\u00f3citos)",
+      "label": "Talassemia (Destruição de eritrócitos)",
       "group": "disease",
       "shape": "dot",
       "size": 30
@@ -1009,20 +930,20 @@ const mapData = {
     },
     {
       "id": 162,
-      "label": "Trombocitopenia e hiperplasia de medula \u00f3ssea",
+      "label": "Trombocitopenia e hiperplasia de medula óssea",
       "group": "symptom",
       "shape": "box"
     },
     {
       "id": 163,
-      "label": "Infarto espl\u00eanico",
+      "label": "Infarto esplênico",
       "group": "disease",
       "shape": "dot",
       "size": 30
     },
     {
       "id": 164,
-      "label": "Dor intensa \u00e0 palpa\u00e7\u00e3o do ba\u00e7o",
+      "label": "Dor intensa à palpação do baço",
       "group": "symptom",
       "shape": "box"
     },
@@ -1035,25 +956,19 @@ const mapData = {
     },
     {
       "id": 166,
-      "label": "Ba\u00e7o muito aumentado",
+      "label": "Esplenomegalia maciça",
       "group": "symptom",
       "shape": "box"
     },
     {
       "id": 167,
-      "label": "R\u00edgido",
+      "label": "Baço rígido",
       "group": "symptom",
       "shape": "box"
     },
     {
       "id": 168,
-      "label": "Irregular",
-      "group": "symptom",
-      "shape": "box"
-    },
-    {
-      "id": 169,
-      "label": "Com sopro",
+      "label": "Baço irregular",
       "group": "symptom",
       "shape": "box"
     },
@@ -1072,12 +987,6 @@ const mapData = {
       "size": 30
     },
     {
-      "id": 172,
-      "label": "Com sopro no espa\u00e7o de traube",
-      "group": "symptom",
-      "shape": "box"
-    },
-    {
       "id": 173,
       "label": "Periesplenite",
       "group": "disease",
@@ -1086,20 +995,20 @@ const mapData = {
     },
     {
       "id": 174,
-      "label": "Atrito \u00e0 ausculta na superf\u00edcie espl\u00eanica",
+      "label": "Atrito à ausculta na superfície esplênica",
       "group": "symptom",
       "shape": "box"
     },
     {
       "id": 175,
-      "label": "Tumor espl\u00eanico",
+      "label": "Tumor esplênico",
       "group": "disease",
       "shape": "dot",
       "size": 30
     },
     {
       "id": 176,
-      "label": "Macicez no espa\u00e7o de traube",
+      "label": "Macicez de Traube",
       "group": "symptom",
       "shape": "box"
     },
@@ -1112,7 +1021,7 @@ const mapData = {
     },
     {
       "id": 178,
-      "label": "Massa puls\u00e1til \u00e0 esquerda da linha mediana",
+      "label": "Massa pulsátil à esquerda da linha mediana",
       "group": "symptom",
       "shape": "box"
     },
@@ -1123,33 +1032,27 @@ const mapData = {
       "shape": "box"
     },
     {
-      "id": 180,
-      "label": "Sopro",
-      "group": "symptom",
-      "shape": "box"
-    },
-    {
       "id": 181,
-      "label": "Expans\u00e3o dolorosa se ruptura",
+      "label": "Expansão dolorosa se ruptura",
       "group": "symptom",
       "shape": "box"
     },
     {
       "id": 182,
-      "label": "Hipertens\u00e3o portal",
+      "label": "Hipertensão portal",
       "group": "disease",
       "shape": "dot",
       "size": 30
     },
     {
       "id": 183,
-      "label": "Esplenomegalia (ba\u00e7o r\u00edgido e liso)",
+      "label": "Esplenomegalia (baço rígido e liso)",
       "group": "symptom",
       "shape": "box"
     },
     {
       "id": 184,
-      "label": "Varizes esof\u00e1gicas",
+      "label": "Varizes esofágicas",
       "group": "symptom",
       "shape": "box"
     },
@@ -1161,57 +1064,57 @@ const mapData = {
     },
     {
       "id": 186,
-      "label": "Circula\u00e7\u00e3o colateral periumbilical (sinal de cruveilhier-baumgarten - sopro umbilical)",
+      "label": "Circulação colateral periumbilical (sinal de cruveilhier-baumgarten - sopro umbilical)",
       "group": "symptom",
       "shape": "box"
     },
     {
       "id": 187,
-      "label": "Cabe\u00e7a de medusa",
+      "label": "Cabeça de medusa",
       "group": "symptom",
       "shape": "box"
     },
     {
       "id": 188,
-      "label": "Infarto agudo do mioc\u00e1rdio",
+      "label": "Infarto agudo do miocárdio",
       "group": "disease",
       "shape": "dot",
       "size": 30
     },
     {
       "id": 189,
-      "label": "Diagn\u00f3stico diferencial de c\u00f3lica biliar",
+      "label": "Diagnóstico diferencial de cólica biliar",
       "group": "symptom",
       "shape": "box"
     },
     {
       "id": 190,
-      "label": "Dor em topografia epig\u00e1strica",
+      "label": "Dor em topografia epigástrica",
       "group": "symptom",
       "shape": "box"
     },
     {
       "id": 191,
-      "label": "Insufici\u00eancia Card\u00edaca Congestiva (ICC)",
+      "label": "Insuficiência Cardíaca Congestiva (ICC)",
       "group": "disease",
       "shape": "dot",
       "size": 30
     },
     {
       "id": 192,
-      "label": "Borda romba e doloroso (congest\u00e3o)",
+      "label": "Borda hepática romba e dolorosa",
       "group": "symptom",
       "shape": "box"
     },
     {
       "id": 193,
-      "label": "Refluxo hepatojugular e turg\u00eancia jugular",
+      "label": "Refluxo hepatojugular e turgência jugular",
       "group": "symptom",
       "shape": "box"
     },
     {
       "id": 194,
-      "label": "\u00cdleo vascular",
+      "label": "Íleo vascular",
       "group": "disease",
       "shape": "dot",
       "size": 30
@@ -1249,13 +1152,13 @@ const mapData = {
     },
     {
       "id": 200,
-      "label": "Dor em faixa no abdome superior/epig\u00e1strio irradiada para o dorso",
+      "label": "Dor em faixa no abdome superior/epigástrio irradiada para o dorso",
       "group": "symptom",
       "shape": "box"
     },
     {
       "id": 201,
-      "label": "Al\u00edvio com flex\u00e3o do corpo",
+      "label": "Alívio com flexão do corpo",
       "group": "symptom",
       "shape": "box"
     },
@@ -1279,14 +1182,14 @@ const mapData = {
     },
     {
       "id": 205,
-      "label": "Pancreatite cr\u00f4nica agudizada",
+      "label": "Pancreatite crônica agudizada",
       "group": "disease",
       "shape": "dot",
       "size": 30
     },
     {
       "id": 206,
-      "label": "Dor epig\u00e1strica/faixa irradiada para o dorso",
+      "label": "Dor epigástrica/faixa irradiada para o dorso",
       "group": "symptom",
       "shape": "box"
     },
@@ -1304,13 +1207,13 @@ const mapData = {
     },
     {
       "id": 209,
-      "label": "Icter\u00edcia",
+      "label": "Icterícia",
       "group": "symptom",
       "shape": "box"
     },
     {
       "id": 210,
-      "label": "Ascite pancre\u00e1tica",
+      "label": "Ascite pancreática",
       "group": "symptom",
       "shape": "box"
     },
@@ -1323,64 +1226,58 @@ const mapData = {
     },
     {
       "id": 212,
-      "label": "Abaulamento e macicez p\u00e9lvica",
+      "label": "Abaulamento e macicez pélvica",
       "group": "symptom",
       "shape": "box"
     },
     {
       "id": 213,
-      "label": "Diagn\u00f3stico diferencial de tumor e gravidez",
+      "label": "Diagnóstico diferencial de tumor e gravidez",
       "group": "symptom",
       "shape": "box"
     },
     {
       "id": 214,
-      "label": "C\u00f3lica renal",
+      "label": "Cólica renal",
       "group": "disease",
       "shape": "dot",
       "size": 30
     },
     {
       "id": 215,
-      "label": "Dor aguda forte subcostal ou lombar com irradia\u00e7\u00e3o para os genitais/regi\u00e3o inguinal",
+      "label": "Dor aguda forte subcostal ou lombar com irradiação para os genitais/região inguinal",
       "group": "symptom",
       "shape": "box"
     },
     {
       "id": 216,
-      "label": "Perfura\u00e7\u00e3o de bexiga",
+      "label": "Perfuração de bexiga",
       "group": "disease",
       "shape": "dot",
       "size": 30
     },
     {
       "id": 217,
-      "label": "Irrita\u00e7\u00e3o peritoneal inferior qu\u00edmica (por \u00e1cido da urina)",
+      "label": "Irritação peritoneal inferior química (por ácido da urina)",
       "group": "symptom",
       "shape": "box"
     },
     {
       "id": 218,
-      "label": "Dor em hipog\u00e1strio",
-      "group": "symptom",
-      "shape": "box"
-    },
-    {
-      "id": 219,
-      "label": "Blumberg",
+      "label": "Dor em hipogástrio",
       "group": "symptom",
       "shape": "box"
     },
     {
       "id": 220,
-      "label": "Perfura\u00e7\u00e3o de ureter",
+      "label": "Perfuração de ureter",
       "group": "disease",
       "shape": "dot",
       "size": 30
     },
     {
       "id": 221,
-      "label": "Irrita\u00e7\u00e3o peritoneal e contratura abdominal severa",
+      "label": "Irritação peritoneal e contratura abdominal severa",
       "group": "symptom",
       "shape": "box"
     },
@@ -1393,7 +1290,7 @@ const mapData = {
     },
     {
       "id": 223,
-      "label": "Diagn\u00f3stico diferencial de esplenomegalia com aumento unilateral (p\u00f3lo palp\u00e1vel bimanualmente)",
+      "label": "Diagnóstico diferencial de esplenomegalia com aumento unilateral (pólo palpável bimanualmente)",
       "group": "symptom",
       "shape": "box"
     },
@@ -1405,7 +1302,7 @@ const mapData = {
     },
     {
       "id": 225,
-      "label": "Rins polic\u00edsticos",
+      "label": "Rins policísticos",
       "group": "disease",
       "shape": "dot",
       "size": 30
@@ -1418,7 +1315,7 @@ const mapData = {
     },
     {
       "id": 227,
-      "label": "Palpa\u00e7\u00e3o bimanual de contorno renal",
+      "label": "Palpação bimanual de contorno renal",
       "group": "symptom",
       "shape": "box"
     },
@@ -1431,7 +1328,7 @@ const mapData = {
     },
     {
       "id": 229,
-      "label": "Macicez p\u00e9lvica substituindo timpanismo",
+      "label": "Macicez pélvica substituindo timpanismo",
       "group": "symptom",
       "shape": "box"
     },
@@ -1450,13 +1347,13 @@ const mapData = {
     },
     {
       "id": 232,
-      "label": "Macicez n\u00e3o m\u00f3vel na pelve",
+      "label": "Macicez não móvel na pelve",
       "group": "symptom",
       "shape": "box"
     },
     {
       "id": 233,
-      "label": "Abcesso p\u00e9lvico",
+      "label": "Abcesso pélvico",
       "group": "disease",
       "shape": "dot",
       "size": 30
@@ -1469,7 +1366,7 @@ const mapData = {
     },
     {
       "id": 235,
-      "label": "Distens\u00e3o p\u00e9lvica",
+      "label": "Distensão pélvica",
       "group": "symptom",
       "shape": "box"
     },
@@ -1481,20 +1378,20 @@ const mapData = {
     },
     {
       "id": 237,
-      "label": "Gravidez ect\u00f3pica rota",
+      "label": "Gravidez ectópica rota",
       "group": "disease",
       "shape": "dot",
       "size": 30
     },
     {
       "id": 238,
-      "label": "Irrita\u00e7\u00e3o peritoneal",
+      "label": "Irritação peritoneal",
       "group": "symptom",
       "shape": "box"
     },
     {
       "id": 239,
-      "label": "Dor s\u00fabita e intensa unilateral",
+      "label": "Dor súbita e intensa unilateral",
       "group": "symptom",
       "shape": "box"
     },
@@ -1513,45 +1410,45 @@ const mapData = {
     },
     {
       "id": 242,
-      "label": "Dor aguda unilateral em fossa il\u00edaca",
+      "label": "Dor aguda unilateral em fossa ilíaca",
       "group": "symptom",
       "shape": "box"
     },
     {
       "id": 243,
-      "label": "Sinais de irrita\u00e7\u00e3o peritoneal",
+      "label": "Sinais de irritação peritoneal",
       "group": "symptom",
       "shape": "box"
     },
     {
       "id": 244,
-      "label": "Perfura\u00e7\u00e3o uterina",
+      "label": "Perfuração uterina",
       "group": "disease",
       "shape": "dot",
       "size": 30
     },
     {
       "id": 245,
-      "label": "Sinais de peritonite e pneumoperit\u00f4nio",
+      "label": "Sinais de peritonite e pneumoperitônio",
       "group": "symptom",
       "shape": "box"
     },
     {
       "id": 246,
-      "label": "Abcesso subfr\u00eanico",
+      "label": "Abcesso subfrênico",
       "group": "disease",
       "shape": "dot",
       "size": 30
     },
     {
       "id": 247,
-      "label": "Dor no hipoc\u00f4ndrio ipsilateral",
+      "label": "Dor no hipocôndrio ipsilateral",
       "group": "symptom",
       "shape": "box"
     },
     {
       "id": 248,
-      "label": "\u00c0 palpa\u00e7\u00e3o profunda ou ppl posterior",
+      "label": "Dor à PPL posterior",
       "group": "symptom",
       "shape": "box"
     },
@@ -1563,7 +1460,7 @@ const mapData = {
     },
     {
       "id": 250,
-      "label": "Percuss\u00e3o maci\u00e7a",
+      "label": "Percussão maciça",
       "group": "symptom",
       "shape": "box"
     },
@@ -1582,7 +1479,7 @@ const mapData = {
     },
     {
       "id": 253,
-      "label": "Abdome globoso/batr\u00e1quio/protuberante",
+      "label": "Abdome globoso/protuberante",
       "group": "symptom",
       "shape": "box"
     },
@@ -1606,7 +1503,7 @@ const mapData = {
     },
     {
       "id": 257,
-      "label": "Macicez m\u00f3vel",
+      "label": "Macicez móvel",
       "group": "symptom",
       "shape": "box"
     },
@@ -1618,7 +1515,7 @@ const mapData = {
     },
     {
       "id": 259,
-      "label": "Semic\u00edrculos de skoda",
+      "label": "Semicírculos de skoda",
       "group": "symptom",
       "shape": "box"
     },
@@ -1643,52 +1540,52 @@ const mapData = {
     },
     {
       "id": 263,
-      "label": "Di\u00e1stase dos retos abdominais",
+      "label": "Diástase dos retos abdominais",
       "group": "disease",
       "shape": "dot",
       "size": 30
     },
     {
       "id": 264,
-      "label": "Abaulamento longitudinal na linha mediana ao aumentar a press\u00e3o abdominal",
+      "label": "Abaulamento longitudinal na linha mediana ao aumentar a pressão abdominal",
       "group": "symptom",
       "shape": "box"
     },
     {
       "id": 265,
-      "label": "DPOC (Doen\u00e7a Pulmonar Obstrutiva Cr\u00f4nica)",
+      "label": "DPOC (Doença Pulmonar Obstrutiva Crônica)",
       "group": "disease",
       "shape": "dot",
       "size": 30
     },
     {
       "id": 266,
-      "label": "F\u00edgado rebaixado (n\u00e3o necessariamente aumentado)",
+      "label": "Fígado rebaixado (sem hepatomegalia)",
       "group": "symptom",
       "shape": "box"
     },
     {
       "id": 267,
-      "label": "Borda lisa",
+      "label": "Borda hepática lisa",
       "group": "symptom",
       "shape": "box"
     },
     {
       "id": 268,
-      "label": "Consist\u00eancia normal e indolor",
+      "label": "Fígado normal e indolor",
       "group": "symptom",
       "shape": "box"
     },
     {
       "id": 269,
-      "label": "H\u00e9rnia",
+      "label": "Hérnia",
       "group": "disease",
       "shape": "dot",
       "size": 30
     },
     {
       "id": 270,
-      "label": "Abaulamento na parede abdominal detect\u00e1vel e redut\u00edvel ou encarcerado \u00e0 inspe\u00e7\u00e3o/palpa\u00e7\u00e3o",
+      "label": "Abaulamento na parede abdominal detectável e redutível ou encarcerado à inspeção/palpação",
       "group": "symptom",
       "shape": "box"
     },
@@ -1701,7 +1598,7 @@ const mapData = {
     },
     {
       "id": 272,
-      "label": "N\u00f3dulos palp\u00e1veis",
+      "label": "Nódulos palpáveis",
       "group": "symptom",
       "shape": "box"
     },
@@ -1745,7 +1642,7 @@ const mapData = {
     },
     {
       "id": 279,
-      "label": "Abdome em t\u00e1bua (contratura)",
+      "label": "Abdome em tábua (contratura)",
       "group": "symptom",
       "shape": "box"
     },
@@ -1770,7 +1667,7 @@ const mapData = {
     },
     {
       "id": 283,
-      "label": "Dor som\u00e1tica intensa relacionada \u00e0 respira\u00e7\u00e3o com acometimento dos nervos da parede.",
+      "label": "Dor somática intensa relacionada à respiração com acometimento dos nervos da parede.",
       "group": "symptom",
       "shape": "box"
     }
@@ -1786,7 +1683,7 @@ const mapData = {
     },
     {
       "from": 4,
-      "to": 5
+      "to": 11
     },
     {
       "from": 6,
@@ -1822,7 +1719,7 @@ const mapData = {
     },
     {
       "from": 12,
-      "to": 16
+      "to": 38
     },
     {
       "from": 12,
@@ -1839,22 +1736,6 @@ const mapData = {
     {
       "from": 12,
       "to": 20
-    },
-    {
-      "from": 21,
-      "to": 7
-    },
-    {
-      "from": 21,
-      "to": 8
-    },
-    {
-      "from": 21,
-      "to": 9
-    },
-    {
-      "from": 21,
-      "to": 10
     },
     {
       "from": 22,
@@ -1950,7 +1831,7 @@ const mapData = {
     },
     {
       "from": 39,
-      "to": 44
+      "to": 38
     },
     {
       "from": 39,
@@ -1978,7 +1859,7 @@ const mapData = {
     },
     {
       "from": 49,
-      "to": 51
+      "to": 38
     },
     {
       "from": 49,
@@ -1986,7 +1867,7 @@ const mapData = {
     },
     {
       "from": 49,
-      "to": 53
+      "to": 94
     },
     {
       "from": 49,
@@ -2050,7 +1931,7 @@ const mapData = {
     },
     {
       "from": 67,
-      "to": 71
+      "to": 66
     },
     {
       "from": 67,
@@ -2062,7 +1943,7 @@ const mapData = {
     },
     {
       "from": 73,
-      "to": 71
+      "to": 66
     },
     {
       "from": 75,
@@ -2101,12 +1982,8 @@ const mapData = {
       "to": 84
     },
     {
-      "from": 83,
-      "to": 85
-    },
-    {
       "from": 86,
-      "to": 87
+      "to": 100
     },
     {
       "from": 86,
@@ -2206,7 +2083,7 @@ const mapData = {
     },
     {
       "from": 110,
-      "to": 85
+      "to": 84
     },
     {
       "from": 112,
@@ -2214,7 +2091,7 @@ const mapData = {
     },
     {
       "from": 112,
-      "to": 114
+      "to": 98
     },
     {
       "from": 112,
@@ -2234,7 +2111,7 @@ const mapData = {
     },
     {
       "from": 117,
-      "to": 16
+      "to": 38
     },
     {
       "from": 117,
@@ -2246,7 +2123,7 @@ const mapData = {
     },
     {
       "from": 121,
-      "to": 16
+      "to": 38
     },
     {
       "from": 121,
@@ -2254,7 +2131,7 @@ const mapData = {
     },
     {
       "from": 121,
-      "to": 124
+      "to": 98
     },
     {
       "from": 125,
@@ -2290,7 +2167,7 @@ const mapData = {
     },
     {
       "from": 132,
-      "to": 133
+      "to": 19
     },
     {
       "from": 132,
@@ -2386,7 +2263,7 @@ const mapData = {
     },
     {
       "from": 152,
-      "to": 153
+      "to": 151
     },
     {
       "from": 154,
@@ -2458,7 +2335,7 @@ const mapData = {
     },
     {
       "from": 165,
-      "to": 169
+      "to": 151
     },
     {
       "from": 170,
@@ -2478,7 +2355,7 @@ const mapData = {
     },
     {
       "from": 170,
-      "to": 169
+      "to": 151
     },
     {
       "from": 171,
@@ -2498,7 +2375,7 @@ const mapData = {
     },
     {
       "from": 171,
-      "to": 172
+      "to": 151
     },
     {
       "from": 173,
@@ -2526,7 +2403,7 @@ const mapData = {
     },
     {
       "from": 177,
-      "to": 180
+      "to": 197
     },
     {
       "from": 177,
@@ -2670,7 +2547,7 @@ const mapData = {
     },
     {
       "from": 216,
-      "to": 219
+      "to": 94
     },
     {
       "from": 216,
