@@ -209,24 +209,88 @@ function registerEvents() {
   });
 
   networkContainer.addEventListener('contextmenu', e => e.preventDefault());
+  
+  let contextNodeId = null;
+  const contextMenu = document.getElementById('contextMenu');
+
+  document.addEventListener('click', (e) => {
+    if (!contextMenu.contains(e.target)) {
+      contextMenu.classList.add('hidden');
+    }
+  });
+
   network.on("oncontext", function (params) {
     const nodeId = this.getNodeAt(params.pointer.DOM);
     if (nodeId) {
-      const node = currentNodes.get(nodeId);
-      const newLabel = window.prompt("Editar nome do nó:", node.label);
-      if (newLabel && newLabel.trim() !== "" && newLabel !== node.label) {
-        const titleText = newLabel.trim();
-        // Update dataset UI
-        currentNodes.update({ id: nodeId, label: titleText });
-        // Update underlying array
-        const nIndex = allNodes.findIndex(n => n.id === nodeId);
-        if (nIndex !== -1) allNodes[nIndex].label = titleText;
-        
-        // Update sidebar label if it's the focused node
-        if (focusedNodeId === nodeId && infoTitle.textContent !== "???") {
-          infoTitle.textContent = titleText;
-        }
+      contextNodeId = nodeId;
+      contextMenu.style.left = params.event.clientX + 'px';
+      contextMenu.style.top = params.event.clientY + 'px';
+      contextMenu.classList.remove('hidden');
+    } else {
+      contextMenu.classList.add('hidden');
+    }
+  });
+
+  document.getElementById('ctxEditBtn').addEventListener('click', () => {
+    contextMenu.classList.add('hidden');
+    if(!contextNodeId) return;
+    const node = currentNodes.get(contextNodeId);
+    if(!node) return;
+    
+    const newLabel = window.prompt("Editar nome do nó:", node.label);
+    if (newLabel && newLabel.trim() !== "" && newLabel !== node.label) {
+      const titleText = newLabel.trim();
+      currentNodes.update({ id: contextNodeId, label: titleText });
+      const nIndex = allNodes.findIndex(n => n.id === contextNodeId);
+      if (nIndex !== -1) allNodes[nIndex].label = titleText;
+      
+      if (focusedNodeId === contextNodeId && infoTitle.textContent !== "???") {
+        infoTitle.textContent = titleText;
       }
+    }
+  });
+
+  document.getElementById('ctxDeleteBtn').addEventListener('click', () => {
+    contextMenu.classList.add('hidden');
+    if(!contextNodeId) return;
+    
+    const node = currentNodes.get(contextNodeId);
+    if(!node) return;
+    
+    if(!confirm(`Tem certeza que deseja excluir '${node.label}'?`)) return;
+    
+    const connectedEdges = currentEdges.get().filter(e => e.from === contextNodeId || e.to === contextNodeId);
+    const connectedEdgeIds = connectedEdges.map(e => e.id);
+    
+    const adjacentNodeIds = new Set();
+    connectedEdges.forEach(e => {
+      adjacentNodeIds.add(e.from === contextNodeId ? e.to : e.from);
+    });
+    
+    currentEdges.remove(connectedEdgeIds);
+    allEdges = allEdges.filter(e => !connectedEdgeIds.includes(e.id));
+    
+    currentNodes.remove(contextNodeId);
+    allNodes = allNodes.filter(n => n.id !== contextNodeId);
+    diseaseNodes = diseaseNodes.filter(n => n.id !== contextNodeId);
+    testPool = testPool.filter(n => n.id !== contextNodeId);
+    
+    const orphanedNodes = [];
+    adjacentNodeIds.forEach(adjId => {
+      const hasEdges = allEdges.some(e => e.from === adjId || e.to === adjId);
+      if (!hasEdges) orphanedNodes.push(adjId);
+    });
+    
+    if (orphanedNodes.length > 0) {
+      currentNodes.remove(orphanedNodes);
+      allNodes = allNodes.filter(n => !orphanedNodes.includes(n.id));
+      diseaseNodes = diseaseNodes.filter(n => !orphanedNodes.includes(n.id));
+      testPool = testPool.filter(n => !orphanedNodes.includes(n.id));
+    }
+    
+    if (focusedNodeId === contextNodeId || orphanedNodes.includes(focusedNodeId)) {
+      resetHighlights();
+      infoPanel.classList.add('hidden');
     }
   });
 

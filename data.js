@@ -1655,6 +1655,90 @@ const mapData = {
       "label": "Eliminação de muco nas fezes",
       "group": "symptom",
       "shape": "box"
+    },
+    {
+      "id": 285,
+      "label": "Sopro cardíaco novo ou modificado",
+      "group": "symptom",
+      "shape": "box"
+    },
+    {
+      "id": 286,
+      "label": "Nódulos de Osler / Lesões de Janeway",
+      "group": "symptom",
+      "shape": "box"
+    },
+    {
+      "id": 287,
+      "label": "Febre em paroxismos (Terçã/Quartã)",
+      "group": "symptom",
+      "shape": "box"
+    },
+    {
+      "id": 288,
+      "label": "Histórico de viagem para área endêmica malárica",
+      "group": "symptom",
+      "shape": "box"
+    },
+    {
+      "id": 289,
+      "label": "Esferócitos no sangue periférico",
+      "group": "symptom",
+      "shape": "box"
+    },
+    {
+      "id": 290,
+      "label": "CHCM elevado",
+      "group": "symptom",
+      "shape": "box"
+    },
+    {
+      "id": 291,
+      "label": "Células em alvo (Target cells)",
+      "group": "symptom",
+      "shape": "box"
+    },
+    {
+      "id": 292,
+      "label": "Microcitose severa desproporcional à anemia",
+      "group": "symptom",
+      "shape": "box"
+    },
+    {
+      "id": 293,
+      "label": "Exposição ao mosquito-palha (Flebotomíneo)",
+      "group": "symptom",
+      "shape": "box"
+    },
+    {
+      "id": 294,
+      "label": "Pancitopenia com hipergamaglobulinemia",
+      "group": "symptom",
+      "shape": "box"
+    },
+    {
+      "id": 295,
+      "label": "Blastos no sangue periférico",
+      "group": "symptom",
+      "shape": "box"
+    },
+    {
+      "id": 296,
+      "label": "Sangramento difuso (Gengival/Petéquias)",
+      "group": "symptom",
+      "shape": "box"
+    },
+    {
+      "id": 297,
+      "label": "Linfonodomegalia indolor (Pescoço/Axila)",
+      "group": "symptom",
+      "shape": "box"
+    },
+    {
+      "id": 298,
+      "label": "Sintomas B (Febre, sudorese noturna, perda de peso)",
+      "group": "symptom",
+      "shape": "box"
     }
   ],
   "edges": [
@@ -2769,6 +2853,62 @@ const mapData = {
     {
       "from": 83,
       "to": 138
+    },
+    {
+      "from": 147,
+      "to": 285
+    },
+    {
+      "from": 147,
+      "to": 286
+    },
+    {
+      "from": 152,
+      "to": 287
+    },
+    {
+      "from": 152,
+      "to": 288
+    },
+    {
+      "from": 156,
+      "to": 289
+    },
+    {
+      "from": 156,
+      "to": 290
+    },
+    {
+      "from": 158,
+      "to": 291
+    },
+    {
+      "from": 158,
+      "to": 292
+    },
+    {
+      "from": 165,
+      "to": 293
+    },
+    {
+      "from": 165,
+      "to": 294
+    },
+    {
+      "from": 170,
+      "to": 295
+    },
+    {
+      "from": 170,
+      "to": 296
+    },
+    {
+      "from": 171,
+      "to": 297
+    },
+    {
+      "from": 171,
+      "to": 298
     }
   ]
 };
